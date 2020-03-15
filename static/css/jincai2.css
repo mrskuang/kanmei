@@ -1,0 +1,90 @@
+.jianpai li img{
+            vertical-align:middle;
+        }
+        
+        
+        
+        
+
+        .rsule p{
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 12px;
+           line-height: 30px;
+           
+            
+        }
+        .headers-rsule ul{
+            display: flex;
+        }
+        .headers-rsule ul li{
+            list-style: none;
+            padding: 0  3px;
+        }
+        .bei li{
+            margin:  0 auto;
+            position: relative;
+            top: -26px;
+            font-size: 12px;
+        }
+       
+        .page{
+            display: flex;
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 14px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+        .page li{
+            padding: 0 5px;
+        }
+        .huawen{
+            width: 955px;
+            margin: 0 auto;
+        }
+        .footer ul li{
+            margin-left: 10px;
+
+            
+        }
+        .footer ul{
+            margin-left: 100px;
+        }
+        .tu{
+            width: 500px;
+            height: 370px;
+            
+            margin: 0 auto;
+        }
+        .kangmeu{
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+            
+           
+        }
+        .kangmeu ul{
+            display: flex;
+            margin-left:4px;
+        }
+       
+        .kangmeu ul li{
+            list-style: none;
+            padding: 0 3px;
+           
+
+           
+            
+        }
+        .kangmeu .rightbtn  img{
+            
+              position: absolute;
+              right: -16px;
+              top:42px
+        }
+        .kangmeu .leftbtn  img{
+              position: absolute;
+              left: -15px;
+              top:44px
+        }

@@ -1,0 +1,103 @@
+ .jianpai li img{
+            vertical-align:middle;
+        }
+        
+        
+        
+        
+
+        .rsule p{
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 12px;
+           line-height: 30px;
+           
+            
+        }
+        .headers-rsule ul{
+            display: flex;
+        }
+        .headers-rsule ul li{
+            list-style: none;
+            padding: 0  3px;
+        }
+        .bei li{
+            margin:  0 auto;
+            position: relative;
+            top: -26px;
+            font-size: 12px;
+        }
+       
+       
+        .huawen{
+            width: 955px;
+            margin: 0 auto;
+        }
+        .footer ul li{
+            margin-left: 10px;
+
+            
+        }
+        .footer ul{
+            margin-left: 100px;
+        }
+        .login{
+            width: 430px;
+            height: 300px;
+            background-image: url('../img/login/huiyuan_03.png');
+            margin:  0 auto;
+        }
+        .login{
+            text-align: left;
+            padding-top: 30px;
+            padding-left: 30px;
+            color: rgb(78, 91, 22);
+        }
+        .login p{
+            color: rgb(78, 91, 22);
+            
+        }
+       .login-text{
+            margin:  20px 70px;
+        }
+        .code
+            {
+                font-family:Arial;
+                font-style:italic;
+                color:rgb(78, 91, 22);
+                font-size:30px;
+                border:0;
+                padding:2px 3px;
+                letter-spacing:3px;
+                font-weight:bolder;            
+                float:left;           
+                cursor:pointer;
+                width:100px;
+                height:50px;
+              
+                text-align:center;
+                vertical-align:middle;
+                background-color:rgb(240, 244, 247)
+            }
+          
+        .btn button{
+            padding: 5px 20px;
+            background-color: rgb(141, 117, 79);
+           border: none;
+           color:#ffffff;
+           border-radius: 3px;
+           margin-left: 30px;
+        }
+        .btn{
+            margin-left: 120px;
+        }
+        .user{
+            position: relative;
+            top:45px;
+            left: 160px;
+        }
+        .pass{
+            position: relative;
+            top:90px;
+            left: 140px;
+        }

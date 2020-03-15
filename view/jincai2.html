@@ -1,0 +1,94 @@
+
+    
+
+    <link rel="stylesheet" href="./static/css/home.css">
+    <link rel="stylesheet" href="./static/css/jincai2.css">
+    
+   
+            <!--content-->
+            <div style="clear: both;"> </div>
+            <div class="content">
+                <div class="left"> 
+                    <!-- lianxi-->
+                        <div class="lianxi">
+                                  <p>
+                                    <span style="margin-left:60px;font-size: 20px;">报名方式</span><br />
+                                     <?php if(isset($titleinfo)) {foreach($titleinfo as $v){ ?>
+                                            <p style="line-height: 25px"><?php echo $v; ?></p>
+                                     <?php } }?>
+                                      <?php if(isset($titleinfo)) {foreach($telinfo as $v){ ?>
+                                        <p style="text-indent:2em;line-height: 25px"><?php echo $v; ?></p>
+                                      <?php } } ?>
+                                </p>
+                        </div>
+                        <!---->
+                        <div >
+                             <img src="./static/img/index/coffice.png" alt="" style="vertical-align:middle"><a href="<?php echo $logininfo['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $logininfo['name'] ?></a>
+                            <img src="./static/img/index/liping.png" alt="" style="vertical-align:middle"><a href="<?php echo $loginname['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $loginname['name'] ?></a>
+                        </div>
+                        <!--qrcodeinfo-->
+                        <div class="qrcodeinfo">
+                                <ul>
+                                     <li>
+                                        <img src="<?php echo $signup['sign_wxcode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">关注微信</p>
+                                    </li>
+                                    <li>
+                                        <img src="<?php echo $signup['sign_sncode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">新浪微博</p>
+                                    </li>
+                                </ul>
+                        </div>
+
+                        <!-- lipinghe-->
+                        <div class="lipinghe">
+                              <img src="./static/img/jianjie/08.png" alt="">
+                        </div>
+
+                </div>
+                <div class="right">
+                    <div style="height: 18px;"></div>
+                    <div>
+                            <p style="text-align: center; font-family: '黑体';font-size: 23px;">精彩图锦</p>
+                            <img src="./static/img/jianjie/45_03.png" alt="">
+                    </div>
+                    <div class="tu">
+                        <img src="<?php echo $find['Marvellous_type_img'] ?>" alt="" style="width: 100%;height: 100%;">
+                    </div>
+                    <div class="kangmeu">
+                              <ul  style="margin-top: 15px;width: 480px;overflow: hidden;margin-left: 10px" class="imags">
+                                <li><img src="./static/img/2.png" style="width: 155px;height: 103px" ></li>
+                                <li><img src="./static/img/3.png" style="width: 155px;height: 103px"></li>
+                                <li><img src="./static/img/4.png" style="width: 155px;height: 103px"></li>
+                                <li><img src="./static/img/4.png" style="width: 155px;height: 103px"></li>
+                                <li><img src="./static/img/4.png" style="width: 155px;height: 103px"></li>
+                            </ul>
+                            <a href="javascript:void(0);" class="leftbtn"><img src="./static/img/index/left.btn.png" alt=""></a>
+                            <a href="javascript:void(0);" class="rightbtn"><img src="./static/img/index/rightbtn.png" alt=""></a>
+
+            
+                    </div>
+                
+                  
+                        
+                   
+                       
+                        <!--分页-->
+                       
+                    </div>
+                </div>
+        <script>
+        $(document).ready(function(){
+
+            $('.leftbtn').click(function(){
+               
+                 $(".imags  li:last").after($(".imags>li:eq(0)"));   
+            });
+            $('.rightbtn').click(function(){
+               $(".imags  li:first").before($(".imags>li:last"));   
+
+          });
+
+        })
+    </script>
+      

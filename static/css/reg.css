@@ -1,0 +1,109 @@
+.jianpai li img{
+            vertical-align:middle;
+        }
+        
+        
+        
+        
+
+        .rsule p{
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 12px;
+           line-height: 30px;
+           
+            
+        }
+        .headers-rsule ul{
+            display: flex;
+        }
+        .headers-rsule ul li{
+            list-style: none;
+            padding: 0  3px;
+        }
+        .bei li{
+            margin:  0 auto;
+            position: relative;
+            top: -26px;
+            font-size: 12px;
+        }
+       
+       
+        .huawen{
+            width: 955px;
+            margin: 0 auto;
+        }
+        .footer ul li{
+            margin-left: 10px;
+
+            
+        }
+        .footer ul{
+            margin-left: 100px;
+        }
+        .reg{
+            width: 600px;
+          
+            background-image: url('../img/login/huiyuan_03.png');
+            margin:  0 auto;
+
+        }
+        .reg{
+            text-align: left;
+            padding-top: 30px;
+            padding-left: 30px;
+            color: rgb(78, 91, 22);
+        }
+        .reg p{
+            color: rgb(78, 91, 22);
+            
+        }
+       .reg-text{
+            margin:  20px 70px;
+        }
+        
+        .btn button{
+            padding: 5px 20px;
+            background-color: rgb(141, 117, 79);
+           border: none;
+           color:#ffffff;
+           border-radius: 3px;
+           margin-left: 30px;
+        }
+        .btn{
+           //* margin-left: 120px;*/
+        }
+        .btns{
+            margin-left: 156px;
+            margin-top: 15px;
+        }
+        .btns button{
+          padding: 2px 15px;
+          background-color: rgb(141, 117, 79);
+          border: none;
+          color:#ffffff;
+          border-radius: 3px;
+          
+        }
+        .btn-primary{
+          padding: 5px 20px;
+          background-color: rgb(141, 117, 79);
+          border: none;
+          color:#ffffff;
+          border-radius: 3px;
+
+        } 
+        .btn-primary:hover{
+               background-color: rgb(141, 117, 79);
+        }
+        .btn-warning{
+         
+          padding: 5px 20px;
+          background-color: rgb(141, 117, 79);
+          border: none;
+          color:#ffffff;
+          border-radius: 3px;
+        }
+        .btn-warning:hover{
+          background-color: rgb(141, 117, 79);
+        }

@@ -1,0 +1,47 @@
+.jianpai li img{
+            vertical-align:middle;
+        }
+        
+        .rsule ul li {
+           list-style: none;
+           line-height: 40px;
+           color: rgb(179, 159, 99);
+           font-family: "宋体";
+           font-size: 14px;
+           border-bottom: 1px  solid rgb(179, 159, 99) ;
+           
+           
+        }
+        .rsule ul li img{
+            vertical-align:middle;
+            padding-right:15px;
+        }
+       
+
+        .rsule p{
+            margin-bottom: 20px;
+            
+        }
+        .page{
+            display: flex;
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 14px;
+            margin-left: 500px;
+        }
+        .page li{
+            padding: 0 5px;
+        }
+        
+        .huawen{
+            width: 955px;
+            margin: 0 auto;
+        }
+        .footer ul li{
+            margin-left: 10px;
+
+            
+        }
+        .footer ul{
+            margin-left: 100px;
+        }

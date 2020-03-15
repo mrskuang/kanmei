@@ -1,0 +1,86 @@
+.jianpai li img{
+            vertical-align:middle;
+        }
+        
+        
+        
+        
+
+        .rsule p{
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 12px;
+           line-height: 30px;
+           
+            
+        }
+        .headers-rsule ul{
+            display: flex;
+        }
+        .headers-rsule ul li{
+            list-style: none;
+            padding: 0  3px;
+        }
+        .bei li{
+            margin:  0 auto;
+            position: relative;
+            top: -26px;
+            font-size: 12px;
+        }
+        .pai{
+           
+            margin-bottom: 20px;
+            width: 680px;
+
+
+           
+            
+        }
+        .pai .parents{
+            width: 295px;
+            height: 100%;
+            background:rgb(106, 53, 0);
+            margin-left:20px;
+            padding: 10px;
+            float: left;
+            margin-bottom: 20px;
+        }
+        .childrens{
+            width: 295px;
+            height: 100%;
+            background: rgb(233, 222, 184);
+            border-radius: 5px;
+
+        }
+        .childrens img{
+           margin-left: 50px;
+           margin-top: 10px;
+        }
+        .childrens p{
+            font-size: 12px;
+            text-align: center;
+            color: rgb(130, 94, 39);
+            line-height: 25px;
+        }
+        .page{
+            display: flex;
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 14px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+        .page li{
+            padding: 0 5px;
+        }
+        .huawen{
+            width: 955px;
+            margin: 0 auto;
+        }
+        .footer ul li{
+            margin-left: 10px;
+        }
+        .footer ul{
+            margin-left: 100px;
+        }
+        

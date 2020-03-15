@@ -1,0 +1,249 @@
+
+    <link rel="stylesheet" href="./static/css/mendian.css">
+    <link rel="stylesheet" href="./static/css/home.css">
+     <style type="text/css">
+        .bei li a{
+            color: #000;
+            margin: 0px;
+            text-decoration: none;
+        }
+       
+        .pai-img:hover{
+           
+           /*图片变模糊*/
+            //-webkit-filter: blur(1px);
+            opacity: 0.5;
+               
+           transition:all 2s;/*图片放大过程的时间*/
+        }
+        .tou{
+            margin: 0px;
+            color: #fff;
+        }
+        .tou:hover{
+          text-decoration: none;
+          color: #fff;
+        }
+     </style>
+            <!--content-->
+          
+            <div style="clear: both;"> </div>
+            <div class="content">
+                <div class="left"> 
+                    <!-- lianxi-->
+                        <div class="lianxi">
+                               <p>
+                                    <span style="margin-left:60px;font-size: 20px;">报名方式</span><br />
+                                     <?php if(isset($titleinfo)) {foreach($titleinfo as $v){ ?>
+                                            <p style="line-height: 25px"><?php echo $v; ?></p>
+                                     <?php } }?>
+                                      <?php if(isset($titleinfo)) {foreach($telinfo as $v){ ?>
+                                        <p style="text-indent:2em;line-height: 25px"><?php echo $v; ?></p>
+                                      <?php } } ?>
+                                </p>
+                        </div>
+                        <!---->
+                        <div >
+                             <img src="./static/img/index/coffice.png" alt="" style="vertical-align:middle"><a href="<?php echo $logininfo['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $logininfo['name'] ?></a>
+                            <img src="./static/img/index/liping.png" alt="" style="vertical-align:middle"><a href="<?php echo $loginname['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $loginname['name'] ?></a>
+                        </div>
+                        <!--qrcodeinfo-->
+                        <div class="qrcodeinfo">
+                                <ul>
+                                  <li>
+                                        <img src="<?php echo $signup['sign_wxcode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">关注微信</p>
+                                    </li>
+                                    <li>
+                                        <img src="<?php echo $signup['sign_sncode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">新浪微博</p>
+                                    </li>
+                                </ul>
+                        </div>
+
+                        <!-- lipinghe-->
+                        <div class="lipinghe">
+                            <img src="./static/img/jianjie/08.png" alt="">
+                        </div>
+
+                </div>
+                <div class="right">
+                    <div style="height: 18px;"></div>
+                    <div>
+                            <p style="text-align: center; font-family: '黑体';font-size: 23px;">门店风采</p>
+                            <img src="./static/img/jianjie/45_03.png" alt="">
+                    </div>
+                    <div class="headers-rsule">
+                        <ul>
+                            <li ><img src="./static/img/men/01.png" alt=""></li>
+                            <li><img src="./static/img/men/01.png" alt=""></li>
+                            <li><img src="./static/img/men/01.png" alt=""></li>
+                            <li><img src="./static/img/men/01.png" alt=""></li>
+                            <li><img src="./static/img/men/01.png" alt=""></li>
+                            <li><img src="./static/img/men/01.png" alt=""></li>
+                        </ul>
+                        <ul class="bei">
+                           <!--  <li>北京赛区</li>
+                            <li>广州赛区</li>
+                            <li>湖南赛区</li>
+                            <li>湖北赛区</li>
+                            <li>香港赛区</li>
+                            <li>澳门赛区</li> -->
+
+  
+                                <?php foreach($soure as $val){?>
+                                    <li>
+                                      <a href="mendian.php?men_id=<?php echo $val['id'];?>"> 
+                                      <?php echo mb_substr($val['name'],0,2)."赛区" ?>
+                                      </a>
+                                    </li>
+
+                                <?php }?>
+
+                            </ul>
+                              
+                        
+                    </div>
+                        <div class="pai">
+
+                            <?php  if($stroeworks != null){ foreach($stroeworks as $val){ ?>
+                            <div class="parents">
+                                <div class="childrens">
+                                    <img src="<?php echo $val['store_works_img'] ?>" alt="" class="pai-img">
+                                    <p>选手名字：<?php echo $val['store_contacts'] ?>  所属赛区：广东大区</p> 
+                                    <p>来自药店：<?php echo $val['store_name'] ?><span style="color: red;">【当前支持的票数：<?php echo $val['store_works_Number'] ?>票】</span></p>
+                                    <p style="text-align: right;margin-right: 50px;"><span style="background: rgb(130, 94, 39); color: #ffffff;padding: 3px 10px;"><a href="javascript:ajax('vote.php?vo_id=<?php echo $val['store_works_id'] ?>')" class="tou" >投票</a></span></p>
+                                    
+                                </div>
+                            </div>
+                            <?php }}else{ echo  "<p style='text-align: center'>暂无数据</p>";} ?>
+                            
+                            
+                           
+                        </div>
+                        <!-- <div class="pai">
+                            <div class="parents">
+                                <div class="childrens">
+                                    <img src="./static/img/men/04.png" alt="" class="pai-img">
+                                    <p>选手名字：范碧娟  所属赛区：广东大区</p> 
+                                    <p>来自药店：老百姓大药房<span style="color: red;">【当前支持的票数：1290票】</span></p>
+                                    <p style="text-align: right;margin-right: 50px;"><span style="background: rgb(130, 94, 39); color: #ffffff;padding: 3px 10px;"  ><a href="#" class="tou">投票</a></span></p>
+                                    
+                                </div>
+                            </div>
+                            <div class="parents">
+                                <div class="childrens">
+                                    <img src="./static/img/men/03.png" alt="" class="pai-img">
+                                    <p>选手名字：范碧娟  所属赛区：广东大区</p> 
+                                    <p>来自药店：老百姓大药房<span style="color: red;">【当前支持的票数：1290票】</span></p>
+                                    <p style="text-align: right;margin-right: 50px;"><span style="background: rgb(130, 94, 39); color: #ffffff;padding: 3px 10px;"  ><a href="#" class="tou">投票</a></span></p>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- <div class="pai">
+                            <div class="parents">
+                                <div class="childrens">
+                                    <img src="./static/img/men/04.png" alt="" class="pai-img">
+                                    <p>选手名字：范碧娟  所属赛区：广东大区</p> 
+                                    <p>来自药店：老百姓大药房<span style="color: red;">【当前支持的票数：1290票】</span></p>
+                                    <p style="text-align: right;margin-right: 50px;"><span style="background: rgb(130, 94, 39); color: #ffffff;padding: 3px 10px;"  ><a href="#" class="tou">投票</a></span></p>
+                                    
+                                </div>
+                            </div>
+                            <div class="parents">
+                                <div class="childrens">
+                                    <img src="./static/img/men/03.png" alt="" class="pai-img">
+                                    <p>选手名字：范碧娟  所属赛区：广东大区</p> 
+                                    <p>来自药店：老百姓大药房<span style="color: red;">【当前支持的票数：1290票】</span></p>
+                                    <p style="text-align: right;margin-right: 50px;"><span style="background: rgb(130, 94, 39); color: #ffffff;padding: 3px 10px;"  ><a href="#" class="tou">投票</a></span></p>
+                                </div>
+                            </div>
+                        </div> -->
+                      <!--   <div class="pai">
+                            <div class="parents">
+                                <div class="childrens">
+                                    <img src="./static/img/men/04.png" alt="" class="pai-img">
+                                    <p>选手名字：范碧娟  所属赛区：广东大区</p> 
+                                    <p>来自药店：老百姓大药房<span style="color: red;">【当前支持的票数：1290票】</span></p>
+                                    <p style="text-align: right;margin-right: 50px;"><span style="background: rgb(130, 94, 39); color: #ffffff;padding: 3px 10px;"  ><a href="#" class="tou">投票</a></span></p>
+                                    
+                                </div>
+                            </div>
+                            <div class="parents">
+                                <div class="childrens">
+                                    <img src="./static/img/men/03.png" alt="" class="pai-img">
+                                    <p>选手名字：范碧娟  所属赛区：广东大区</p> 
+                                    <p>来自药店：老百姓大药房<span style="color: red;">【当前支持的票数：1290票】</span></p>
+                                    <p style="text-align: right;margin-right: 50px;"><span style="background: rgb(130, 94, 39); color: #ffffff;padding: 3px 10px;"  ><a href="#" class="tou">投票</a></span></p>
+                                </div>
+                            </div>
+                        </div>     -->
+                        <!--分页-->
+                        <div style="clear:both"></div>
+                        <!-- <ul class="page">
+                            <li>首页</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>末页</li>
+                        </ul> -->
+                        <?php echo $pages; ?>
+                    </div>
+                </div>
+          <script type="text/javascript">
+            var a = '';
+            $(function(){
+              //给有子菜单的li添加一个图标
+              $("li").has("ul").addClass("plus")
+              .click(function(e){
+               
+                e.stopPropagation();
+                if($(e.target).children().length){
+                  $(this).children().slideToggle(800);
+                  $(this).toggleClass("minus");
+                 
+                }else{
+                   a = '1';
+                }
+               
+              })
+            });
+    
+        </script>
+        <script type="text/javascript">
+            function ajax(id){
+               
+                 id= id.match(/=(\S*)/)[1];
+               
+
+
+                $.ajax({
+                  url:"vote.php",
+                  type:"get",
+                  dataType:"json",
+                  data:'ids='+id,
+                  async: false, //四个false属性不能少
+                  cache: false,
+                  contentType: false,
+                  processData: false,
+                  success:function (data) {
+                    if(data.code==1){
+                        alert(data.msg);
+
+                    }
+                    window.history.go(-1);
+                  },
+                  error:function () {
+                  
+                        
+                  }
+                 
+                  })
+                
+            }
+             
+
+            
+        </script>

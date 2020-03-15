@@ -1,0 +1,112 @@
+
+
+.codeinfo{
+    width: 955px;
+    height: 50px;
+    margin: 0 auto;
+   
+}
+.codeinfo div{
+    float: left;
+    
+}
+.infocode ul {
+   display: flex;
+}
+.infocode ul li {
+    list-style: none;
+    font-size: 12px;
+    margin-top:18px;
+    font-family: "微软雅黑";
+    color:#000000;
+    font-weight: 900;
+    
+}
+.content {
+    display: flex;
+    width: 955px;
+    margin: 0 auto;
+}
+ .lianxi{
+    width: 200px;
+    height: 150px;
+    color: rgb(136, 104, 94);
+    font-family: "微软雅黑";
+    font-size: 12.72px;
+    background-image: url('../img/jianjie/tukuan.png');
+    padding:  15px 25px;
+}
+.content .left div:nth-child(2){
+    width: 200px;
+    height: 50px;
+    color: rgb(136, 104, 94);
+    font-family: "微软雅黑";
+    font-size: 12.72px;
+  
+    padding:  15px 25px;
+}
+.content .left div p{
+    text-align: justify;
+    line-height:20px
+    
+}
+.content .left div h2{
+    margin-left: 30px;
+    
+}
+.content .left a{
+    top:20px;
+    
+}
+.content .left img,a{
+    margin-left: 8px;
+}
+.qrcodeinfo{
+    width: 200px;
+    height: 150px;
+    display: flex;
+}
+
+.qrcodeinfo ul {
+    display: flex;
+}
+.qrcodeinfo ul li {
+    list-style: none;
+}
+
+
+.qrcodeinfo ul li p{
+    text-align: center;
+    color: rgb(137, 116, 84);
+    font-weight: bold;
+    
+}
+
+.lipinghe img{
+   width: 258px;
+   height: 180px;
+
+}
+.rsule{
+    padding: 20px 20px;
+}
+
+
+.rsule p{
+    font-size: 14px;
+    font-family: '黑体';
+    font-weight:bold;
+    text-indent: 2em;
+}
+.huawen{
+    width: 955px;
+    margin: 0 auto;
+}
+.footer ul li{
+    margin-left: 10px;
+
+
+}
+.footer ul{
+    margin-left: 100px;
+}

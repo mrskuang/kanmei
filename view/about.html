@@ -1,0 +1,89 @@
+
+     <link rel="stylesheet" href="./static/css/about.css">
+     <link rel="stylesheet" href="./static/css/home.css">
+   
+   
+            <!--content-->
+          <div style="clear: both;"> </div>
+            <div class="content">
+                <div class="left"> 
+                    <!-- lianxi-->
+                        <div class="lianxi">
+                                <p>
+                                    <span style="margin-left:60px;font-size: 20px;">报名方式</span><br />
+                                     <?php if(isset($titleinfo)) {foreach($titleinfo as $v){ ?>
+                                            <p style="line-height: 25px"><?php echo $v; ?></p>
+                                     <?php } }?>
+                                      <?php if(isset($titleinfo)) {foreach($telinfo as $v){ ?>
+                                        <p style="text-indent:2em;line-height: 25px"><?php echo $v; ?></p>
+                                      <?php } } ?>
+                                </p>
+                        </div>
+                        <!---->
+                        <div >
+                           <img src="./static/img/index/coffice.png" alt="" style="vertical-align:middle"><a href="<?php echo $logininfo['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $logininfo['name'] ?></a>
+                            <img src="./static/img/index/liping.png" alt="" style="vertical-align:middle"><a href="<?php echo $loginname['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $loginname['name'] ?></a>
+                        </div>
+                        <!--qrcodeinfo-->
+                        <div class="qrcodeinfo">
+                                <ul>
+                                    <li>
+                                        <img src="<?php echo $signup['sign_wxcode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">关注微信</p>
+                                    </li>
+                                    <li>
+                                        <img src="<?php echo $signup['sign_sncode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">新浪微博</p>
+                                    </li>
+                                </ul>
+                        </div>
+
+                        <!-- lipinghe-->
+                        <div class="lipinghe">
+                            <img src="./static/img/jianjie/08.png" alt="">
+                        </div>
+
+                </div>
+                <div class="right">
+                    <div style="height: 18px;">
+
+                    </div>
+                    <div>
+                            <p style="text-align: center; font-family: '黑体';font-size: 23px;"><?php echo $sche['sche_type_name'] ?></p>
+                            <img src="./static/img/jianjie/45_03.png" alt="">
+                           
+                    </div>
+                
+                    <div class="rsule">
+                        <img src="<?php echo $sche['sche_img'] ?>" alt="" style="width: 550px;height: 400px;margin-left: 45px;">
+                        <div style="">
+
+                            <?php foreach($schexc as $v){ ?>
+                            <img src="<?php echo $v['sche_img']  ?>" alt="">
+                            <p>
+                                   <?php echo $v['sche_content'] ?>
+                            </p>
+                           <?php } ?>
+                            <img src="./static/img/about/m04.png" alt="">
+                            <ul class="jianpai">
+                                <?php foreach($schejl as $v){ ?>
+                                <li><img src="<?php echo $v['sche_img'] ?>" ><?php echo $v['sche_title'] ?></li>
+                                <?php } ?>
+
+                               
+                            </ul>
+                        </div>
+                    
+                        
+                    </div>
+            </div>
+
+            </div>
+            <script>
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>

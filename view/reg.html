@@ -1,0 +1,208 @@
+
+
+                   
+            <link rel="stylesheet" href="./static/css/home.css">
+            <link rel="stylesheet" href="./static/css/reg.css">
+
+            <link rel="stylesheet" type="text/css" href="../admin/css/bootstrap-fileinput.css">
+            <!--content-->
+            <div style="clear: both;"></div>
+            <div class="content">
+                <div class="left"> 
+                    <!-- lianxi-->
+                        <div class="lianxi">
+                             <p>
+                                    <span style="margin-left:60px;font-size: 20px;">报名方式</span><br />
+                                     <?php if(isset($titleinfo)) {foreach($titleinfo as $v){ ?>
+                                            <p style="line-height: 25px"><?php echo $v; ?></p>
+                                     <?php } }?>
+                                      <?php if(isset($titleinfo)) {foreach($telinfo as $v){ ?>
+                                        <p style="text-indent:2em;line-height: 25px"><?php echo $v; ?></p>
+                                      <?php } } ?>
+                                </p>
+                        </div>
+                        <!---->
+                        <div >
+                           <img src="./static/img/index/coffice.png" alt="" style="vertical-align:middle"><a href="<?php echo $logininfo['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $logininfo['name'] ?></a>
+                            <img src="./static/img/index/liping.png" alt="" style="vertical-align:middle"><a href="<?php echo $loginname['url'] ?>" style="color: darkgoldenrod;text-decoration: none;"><?php echo $loginname['name'] ?></a>
+                        </div>
+                        <!--qrcodeinfo-->
+                        <div class="qrcodeinfo">
+                                <ul>
+                                     <li>
+                                        <img src="<?php echo $signup['sign_wxcode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">关注微信</p>
+                                    </li>
+                                    <li>
+                                        <img src="<?php echo $signup['sign_sncode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">新浪微博</p>
+                                    </li>
+                                </ul>
+                        </div>
+
+                        <!-- lipinghe-->
+                        <div class="lipinghe">
+                            <img src="./static/img/jianjie/08.png" alt="">
+                        </div>
+
+                </div>
+                <div class="right">
+                    <div style="height: 18px;"></div>
+                    <div>
+                            <p style="text-align: center; font-family: '黑体';font-size: 23px;"><?php  if(isset($userinfo)){ echo "修改信息";}else{ echo "会员报名";} ?></p>
+                           <img src="./static/img/jianjie/45_03.png" alt="">
+                    </div>
+                    <form action="register.php" method="POST"  id="uploadForm" enctype='multipart/form-data'>
+                         <input type="hidden" name="store_id" value="<?php  if(isset($userinfo)){ echo $userinfo['store_id'];}else{ echo ""; }?>" />
+                  
+                     <div class="reg">
+                         
+                        <div  class="reg-text" >
+                            <label for="">*&nbsp&nbsp&nbsp用户名：</label>
+                            <input type="text" name="username" required value="<?php if(isset($userinfo)){echo $userinfo['store_username'];}  ?>">
+                        </div class='reg-text'>
+                        <div class="reg-text">
+                            <label for="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*密码：</label>
+                            <input type="password" name="password" required value="<?php if(isset($userinfo)){echo substr($userinfo['store_pwd'],0,6);}   ?>">
+                        </div>
+                        <!-- <div class="reg-text">
+                            <label for="">*确认密码：</label>
+                            <input type="text" name="code">
+                        </div> -->
+                        <div class="reg-text">
+                            <label for="">*门店名称：</label>
+                            <input type="text" name="code" required value="<?php if(isset($userinfo)){echo $userinfo['store_name'];}   ?>">
+                        </div>
+                        <div class="reg-text" style="display: flex;">
+                            <label for="">*门店地址：所在地:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <div>
+                                <ul style="display: flex;">
+                                    <li>
+                                       
+                                        <?php
+                                            if(isset($arr)){
+                                            ?>
+                                                  <select id="sheng" style="width: 80px" name="sheng" required>
+                                                      <option value="<?php echo $arr[0]['id'] ?>" selected=true>
+                                                          <?php echo $arr[0]['name'] ?>
+                                                      </option>
+                                                  </select>
+                                            <?php  }else{ ?>      
+                                           
+                                                 <select id="sheng" style="width: 80px" name="sheng" required></select>
+                                            <?php } ?>
+                                        
+
+                                       <!--  <select name="" id="">
+                                            <option value="">广东省</option>
+                                        </select> -->
+                                    </li>
+                                    <li>
+                                        <?php 
+                                          if(isset($arr)){
+                                          ?>
+                                                  <select id="shi" style="width: 80px" name="shi" required>
+                                                      <option value="<?php echo $arr[1]['id'] ?>" selected=true>
+                                                          <?php echo $arr[1]['name'] ?>
+                                                      </option>
+                                                  </select>
+                                                  <?php    }else{ ?>
+                                          
+                                                <select id="shi" style="width: 80px" name="shi" required></select>
+                                            <?php } ?>
+                                       
+
+                                       <!--  <select name="" id="">
+                                            <option value="">广州市</option>
+                                        </select> -->
+                                    </li>
+                                    <li>
+                                        <?php   if(isset($arr)){ ?>
+                                       
+                                                  <select id="qu" style="width: 80px" name="qu" required>
+                                                      <option value="<?php echo $arr[1]['id'] ?>" selected=true>
+                                                          <?php echo $arr[1]['name'] ?>
+                                                      </option >
+                                                  </select>
+                                         
+                                        <?php     }else{ ?>
+                                                <select id="qu" style="width: 80px" name="qu" required></select>
+                                        <?php } ?>
+                                       
+                                       <!--  <select name="" id="">
+                                            <option value="">市辖区</option>
+                                        </select> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="display: flex;margin: 0 auto;width: 300px;">
+                            <div style="padding-right: 15px;">详细地址:</div>
+                            <div><input type="text" name="addres"  required value="<?php if(isset($userinfo)){echo $userinfo['store_adder'];} ?>"></div>
+                        </div>
+                        <div class="reg-text">
+                            <label for="">*&nbsp&nbsp&nbsp联系人：</label>
+                            <input type="text" name="Contacts" required value="<?php  if(isset($userinfo)){echo $userinfo['store_contacts'];}  ?>">
+                        </div>
+                        <div class="reg-text">
+                            <label for="">*联系方式：</label>
+                            <input type="text" name="tel" required value="<?php   if(isset($userinfo)){echo $userinfo['store_tel'];} ?>">
+                        </div>
+                        <div class="reg-text">
+                            <label for="">*&nbsp&nbsp&nbsp联系qq：</label>
+                            <input type="text" name="qq" required value="<?php  if(isset($userinfo)){echo $userinfo['storeqq'];} ?>">
+                        </div>
+                        <div class="reg-text">
+                            <label for="">*连锁名称：</label>
+                            <input type="text" name="Chain_name" required value="<?php  if(isset($userinfo)){echo $userinfo['store_chain_name'];}?>">
+                        </div>
+                       
+                        <div class="reg-text">
+                                            <div class="fileinput fileinput-new" data-provides="fileinput"  id="exampleInputUpload">
+                                                <div class="fileinput-new thumbnail" style="width: 200px;height: auto;max-height:150px;">
+                                                <img id='picImg' style="width: 100%;height: auto;max-height: 150px;" src="<?php 
+                                                        if(isset($userinfo)){
+                                                         echo $userinfo['store_name_img'];
+                                                     }else{
+                                                        echo "../static/img/client.png";
+                                                     }
+
+                                                ?>" alt="" />
+                                                </div>
+                                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                                <div>
+                                                    <span class="btn btn-primary btn-file">
+                                                        <span class="fileinput-new">选择文件</span>
+                                                        <span class="fileinput-exists">换一张</span>
+                                                        <input type="file" style="background-color: rgb(141, 117, 79);" name="pic1" id="picID" accept="image/gif,image/jpeg,image/x-png"/>
+                                                    </span>
+                                                    <a href="javascript:;" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a>
+                                                </div>
+                                            </div>
+
+                                    </div>
+                       
+                        <div class="reg-text">
+                            <label for="">*参赛口号：</label>
+                            <input type="text" name="slogan" style="width: 350px;" required value="<?php  if(isset($userinfo)){echo $userinfo['store_slogan'];} ?>">
+                        </div>
+                        
+                            
+                           <div  class="btn" >
+                               <button type="sumbit" name="<?php  if(isset($userinfo)){ echo 'edit';}else{ echo 'sub';} ?>" >报名</button>
+                               <button type="reset">重新填写</button>
+                           </div >
+                           
+                   
+                    </div>
+                      </form>
+                    </div>
+                </div>
+                <div style="height: 50px"></div>
+                
+           <script src="../static/js/region.js"></script>
+             
+           <script type="text/javascript" src="../admin/js/bootstrap.min.js"></script>
+           <script type="text/javascript" src="../admin/js/bootstrap-fileinput.js"></script>
+           
+           

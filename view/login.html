@@ -1,0 +1,153 @@
+
+    <link rel="stylesheet" href="./static/css/login.css">
+    <link rel="stylesheet" href="./static/css/home.css">
+    
+            <!--content-->
+            <div style="clear: both;"></div>
+            <div class="content">
+                <div class="left"> 
+                    <!-- lianxi-->
+                        <div class="lianxi">
+                                <p>
+                                    <span style="margin-left:60px;font-size: 20px;">报名方式</span><br />
+                                1 康美药业OTC队伍邀请参加大赛;
+                                2 点击本官网 "马上报名" 直接参与
+                                3 报答报名热线:<br/>
+                                    020-38390615-8047 奈小姐
+                                    020-38300615-9890 菜小姐</p>
+                        </div>
+                        <!---->
+                        <div >
+                             <img src="./static/img/index/coffice.png" alt="" style="vertical-align:middle"><a href="reg.php" style="color: darkgoldenrod;text-decoration: none;">马上报名</a>
+                            <img src="./static/img/index/liping.png" alt="" style="vertical-align:middle"><a href="login.php" style="color: darkgoldenrod;text-decoration: none;">立即登录</a>
+                        </div>
+                        <!--qrcodeinfo-->
+                        <div class="qrcodeinfo">
+                                <ul>
+                                      <li>
+                                        <img src="<?php echo $signup['sign_wxcode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">关注微信</p>
+                                    </li>
+                                    <li>
+                                        <img src="<?php echo $signup['sign_sncode'] ?>"><br/>
+                                        <p style="margin-left: 35px;">新浪微博</p>
+                                    </li>
+                                </ul>
+                        </div>
+
+                        <!-- lipinghe-->
+                        <div class="lipinghe">
+                            <img src="./static/img/jianjie/08.png" alt="">
+                        </div>
+
+                </div>
+                <div class="right">
+                    <div style="height: 18px;"></div>
+                    <div>
+                            <p style="text-align: center; font-family: '黑体';font-size: 23px;">会员登录</p>
+                            <img src="./static/img/jianjie/45_03.png" alt="">
+                    </div>
+                     <div class="login">
+                         
+                            <!--  <img src="./static/img/login/user_06.png" alt="" class="user" >
+                             <img src="./static/img/login/pas_06.png" alt="" class="pass"> -->
+                         <form action="logins.php" method="post" id="test_form">
+                            <div  class="login-text" >
+                                <label for="">登录账户名：</label>
+                                <input type="text" name="username" required id="username">
+                            </div class='login-text'>
+                            <div class="login-text">
+                                <label for="">&nbsp&nbsp&nbsp登录密码：</label>
+                                <input type="password" name="password" required id="password">
+                            </div>
+                            <div class="login-text">
+                                <label for="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp验证码：</label>
+                                <input type="text" name="code" required id="inputCode">
+                            </div>
+                            
+                                <p style="text-align: right;padding: 0px 50px;">输入下图的字符，不区分大小写</p>
+                                <div style="margin-left: 150px;height: 60px;"> 
+                                    <div id="checkCode" class="code"  onclick="createCode(4)" ></div>
+                                    <span onclick="createCode(4)" style="position: relative;top:15px">看不清换一张</span>
+                               </div>
+                               
+                               <div  class="btn" >
+                                   <button onclick="validateCode()">登录</button>
+                                   <button>取消</button>
+                               </div >
+                        </form>
+
+                   
+                    </div>
+                    </div>
+                </div>
+               
+   <script>
+   
+    //页面加载时，生成随机验证码
+    window.onload=function(){
+     createCode(4);    
+    }
+
+    //生成验证码的方法
+    function createCode(length) {
+        var code = "";
+        var codeLength = parseInt(length); //验证码的长度
+        var checkCode = document.getElementById("checkCode");
+        ////所有候选组成验证码的字符，当然也可以用中文的
+        var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+        'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); 
+        //循环组成验证码的字符串
+        for (var i = 0; i < codeLength; i++)
+        {
+            //获取随机验证码下标
+            var charNum = Math.floor(Math.random() * 62);
+            //组合成指定字符验证码
+            code += codeChars[charNum];
+        }
+        if (checkCode)
+        {
+            //为验证码区域添加样式名
+            checkCode.className = "code";
+            //将生成验证码赋值到显示区
+            checkCode.innerHTML = code;
+        }
+    }
+    
+    //检查验证码是否正确
+    function validateCode()
+    {
+
+        //获取显示区生成的验证码
+        var checkCode = document.getElementById("checkCode").innerHTML;
+        console.log(checkCode);
+
+        //获取输入的验证码
+        var inputCode = document.getElementById("inputCode").value;
+        var username = document.getElementById("username").value;
+         var password = document.getElementById("password").value;
+        if(username.length <= 0){
+             alert("请输入用户名！");
+
+        }else if(password.length <= 0){
+                alert("请输入密码！");
+        }else if(inputCode.length <= 0){
+                alert("请输入验证码！");
+        }else if(inputCode.toUpperCase() != checkCode.toUpperCase()){
+              alert("验证码输入有误！");
+              createCode(4);
+        }else{
+            var form = document.getElementById('test_form');
+            form.submit();
+        }
+
+        
+        
+
+         
+       
+       
+   }
+   
+   </script>

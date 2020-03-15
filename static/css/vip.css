@@ -1,0 +1,102 @@
+    .jianpai li img{
+        vertical-align:middle;
+    }
+    .rsule p{
+        color: rgb(179, 159, 99);
+        font-family: "宋体";
+        font-size: 12px;
+        line-height: 30px;
+    }
+    .headers-rsule ul{
+        display: flex;
+    }
+    .headers-rsule ul li{
+        list-style: none;
+        padding: 0  3px;
+    }
+    .bei li{
+        margin:  0 auto;
+        position: relative;
+        top: -26px;
+        font-size: 12px;
+    }
+
+
+    .huawen{
+        width: 955px;
+        margin: 0 auto;
+    }
+    .footer ul li{
+         margin-left: 10px;
+    }
+    .footer ul{
+         margin-left: 100px;
+    }
+    .huiyuan{
+        display: flex;
+        padding: 10px 30px;
+    }
+    .huiyuan div{
+        padding: 0px 20px;
+    }
+    .dd{
+        background-color: rgb(255, 255, 255);
+    }
+    .dd p{
+        color: rgb(173,154,88);
+        font-size: 12px;
+        font-family: "宋体常规";
+        line-height: 30px;
+    }
+    .btn{
+        display: flex;
+        width: 580px;
+        height: 50px;
+        margin: 10px auto;
+    }
+    .btn button{
+        background-color: rgb(136, 114, 76);
+        border: none;
+        color:#ffffff;
+        border-radius: 3px;
+        border: 0px;
+    }
+    .btn button:active{
+        border: 0px;
+    }
+    .btn div{
+        width: 50%;
+    }
+    .btn-left  button{
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+    .btn-right {
+        margin-left: 255px;
+    }
+    .btn-right button{
+        padding: 4px 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    .btn-local {
+        margin-left: 410px;
+        margin-top: 15px;
+    }
+    .btn-local button {
+        padding: 4px 15px;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    .fiels{
+        display: flex;
+        padding: 5px 10px;
+        width: 580px;
+        color: rgb(173,154,88);
+        margin: 0 auto;
+    }
+
+       
+    
+      

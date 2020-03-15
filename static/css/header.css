@@ -1,0 +1,94 @@
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+       
+        .contrain{
+            background: rgb(255, 243, 230);
+           
+        }
+        .header .head1{
+           
+            width: 100%;
+            height: 160px;
+        }
+
+        .header .head1 img{
+            width: 100%;
+            height: 160px;
+        }
+        .nav {
+           
+           
+            background-image: url('../img/index/navbg.png');
+            background-repeat:repeat-x;
+           
+        }
+        .nav ul{
+            
+            display: flex;
+            width: 955px;
+            margin: 0 auto;
+        }
+
+        .nav ul li{
+            list-style: none;
+            color: rgb(255, 250, 189);
+            font-family: "宋体";
+            font-size:21px;
+            padding: 10px 0px;
+            margin: 0 auto;
+            font-weight:bolder;
+            width: 100%;
+            height: 100%;
+           
+        }
+        .nav ul li a{
+            color: rgb(255, 250, 189);
+           
+        }
+        .nav ul li a:link{
+            text-decoration: none;
+        }
+        .nav ul li a:hover{
+            background: red;
+            padding:20px 0px;
+        }
+        .codeinfo{
+            width: 955px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(255, 240, 209);
+        }
+        .codeinfo ul li{
+            list-style: none;
+            line-height: 50px;
+             padding: 0 5px;
+             font-family: "微软雅黑";
+             font-weight: bolder;
+        }
+        .codeinfo ul li img{
+          width: 45px;
+          height: 25px;
+          margin-top: 14px;
+          margin-left: 10px;
+        }
+        .codeinfo ul {
+            display: flex;
+            
+        }
+        .banner{
+            width: 955px;
+            height: 369px;
+            margin: 0 auto;
+           
+        }
+        .swiper-container{
+           
+            width:100%;
+           
+        }
+        .swiper-container img{
+            width: 100%;
+        }
+        

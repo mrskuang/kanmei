@@ -1,0 +1,73 @@
+   <link rel="stylesheet" href="./static/css/indexs.css">
+
+        <!--报名方式-->
+        <div class="bm">
+            <img src="./static/img/index/bm.png" alt="">
+            <ul>
+                    <li style="width:300px">
+                        <?php if(isset($titleinfo)) {foreach($titleinfo as $v){ ?>
+                        <p style="text-indent:2em;"><?php echo $v; ?></p>
+                        <?php } }?>
+                       
+                        <?php if(isset($titleinfo)) {foreach($telinfo as $v){ ?>
+                        <p style="text-indent:4em;"><?php echo $v; ?></p>
+                        <?php } } ?>
+    
+                    </li>
+                    <li style="display: flex;">
+                        <img src="<?php if(isset($signup)){echo $signup['sign_wxcode'];} ?>" alt="">
+                        <img src="<?php if(isset($signup)){echo $signup['sign_sncode'];} ?>" alt="">
+                    </li>
+                    <li  style="width: 150px;">
+                       
+                        <div style="display: flex;margin-left: 30px;">
+                                <img src="./static/img/index/coffice.png" ><div style="display: inline;margin-top:11px;margin-left: 5px;"> <a href="<?php echo $logininfo['url'] ?>" style="color: darkgoldenrod"><?php echo $logininfo['name'] ?></a></div>
+                        </div>
+                        <div style="display: flex; margin-top: 15px;margin-left: 30px;" >
+                               
+                                <img src="./static/img/index/liping.png" > <div style="display: inline;margin-top:11px;margin-left: 5px;"><a href="<?php echo  $loginname['url'] ?>" style="color: darkgoldenrod"><?php echo $loginname['name'] ?></a></div>
+                        </div>
+                     
+                    </li>
+                </ul>
+        </div>
+
+        <!--康美中药养身馆-->
+        <div class="kangmeu">
+            
+                <img src="./static/img/index/ys.png" alt="" >
+                <ul  style="margin-top: 15px; " class="imags">
+                    <?php  if($productinfo != null){ foreach($productinfo as $v){ ?>
+                    <li><img src="<?php echo $v['pdt_img']; ?>" style="width: 135px;height: 102px" ></li>
+                    <?php  } }?>
+                  
+                </ul>
+                <a href="javascript:void(0);" class="leftbtn"><img src="./static/img/index/left.btn.png" alt=""></a>
+                <a href="javascript:void(0);" class="rightbtn"><img src="./static/img/index/rightbtn.png" alt=""></a>
+
+        </div>
+       
+       <script>
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+         <script>
+            $(document).ready(function(){
+
+                $('.leftbtn').click(function(){
+                   
+                     $(".imags  li:last").after($(".imags>li:eq(0)"));   
+                });
+                $('.rightbtn').click(function(){
+                   $(".imags  li:first").before($(".imags>li:last"));   
+
+              });
+
+            })
+        </script>
+
+

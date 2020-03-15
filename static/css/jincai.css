@@ -1,0 +1,94 @@
+.jianpai li img{
+            vertical-align:middle;
+        }
+        
+        
+        
+        
+
+        .rsule p{
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 12px;
+           line-height: 30px;
+           
+            
+        }
+        .headers-rsule ul{
+            display: flex;
+        }
+        .headers-rsule ul li{
+            list-style: none;
+            padding: 0  3px;
+        }
+        .bei li{
+            margin:  0 auto;
+            position: relative;
+            top: -26px;
+            font-size: 12px;
+        }
+        .pai{
+           
+           
+           
+            
+        }
+        .pai .parents{
+            width: 295px;
+            height: 225px;
+           
+            margin-left:20px;
+            padding: 10px;
+            border: 1px rgb(106, 53, 0) solid;
+            float: left;
+             margin-bottom: 20px;
+        }
+
+        .parents p{
+            text-align: center;
+            font-size: 14px;
+            color: rgb(106, 53, 0);
+        }
+        .childrens{
+            width: 275px;
+            height: 185px;
+            background: rgb(233, 222, 184);
+            border-radius: 5px;
+            padding: 10px;
+
+        }
+        .childrens img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+        .childrens p{
+            font-size: 12px;
+            text-align: center;
+            color: rgb(130, 94, 39);
+            line-height: 25px;
+        }
+        .page{
+            display: flex;
+            color: rgb(179, 159, 99);
+            font-family: "宋体";
+            font-size: 14px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+        .page li{
+            padding: 0 5px;
+        }
+        .huawen{
+            width: 955px;
+            margin: 0 auto;
+        }
+        .footer ul li{
+            margin-left: 10px;
+
+            
+        }
+        .footer ul{
+            margin-left: 100px;
+        }
+        

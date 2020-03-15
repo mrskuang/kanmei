@@ -1,0 +1,23 @@
+     .jianpai li img{
+                vertical-align:middle;
+      }
+    .rsule{
+        color: rgb(55, 50, 34);
+        font-family: "黑体";
+        font-weight: bolder;
+    }
+    .rsule p{
+         margin-bottom: 20px;
+    }
+    .huawen{
+        width: 955px;
+        margin: 0 auto;
+    }
+    .footer ul li{
+        margin-left: 10px;
+
+
+    }
+    .footer ul{
+        margin-left: 100px;
+    }

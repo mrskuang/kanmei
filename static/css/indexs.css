@@ -1,0 +1,56 @@
+        .bm{
+           width: 955px;
+            margin: 0 auto;
+            padding:  0 10px;
+        }
+        .bm ul{
+            display: flex;
+            margin: 0 auto;
+            
+        }
+        .bm ul li{
+            list-style: none;
+            padding-right: 60px;
+            color: rgb(119, 99, 93);
+            font-family: "微软雅黑";
+            font-size: 14.72px;
+            line-height: 25px;
+           
+        }
+        .bm ul li:nth-child(2) img{
+           padding: 0 20px;
+        }
+        .bm ul li:nth-child(3) img{
+            margin-top:10px;
+        }
+        .kangmeu{
+            width: 955px;
+            margin: 0 auto;
+            padding: 5px 0px;
+            position: relative;
+            margin-bottom: 50px;
+            overflow:hidden;
+        }
+        .kangmeu ul{
+            display: flex;
+        }
+        .kangmeu ul li{
+            list-style: none;
+            margin-left:30px;
+            padding: 0 10px;
+            
+        }
+        .kangmeu .rightbtn  img{
+              position: absolute;
+              left: 925px;
+              top:105px
+        }
+        .kangmeu .leftbtn  img{
+              position: absolute;
+              left: 5px;
+              top:105px
+        }
+        .huawen{
+            width: 955px;
+            margin: 0 auto;
+        }
